@@ -1,0 +1,6 @@
+/.direnv/
+.ccls-cache/
+events.json
+hide
+hide.exe
+hide.pdb

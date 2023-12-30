@@ -1,0 +1,16 @@
+= Hide
+:reproducible:
+
+Simple C program to hide one file inside of another.
+It uses same method as rarjpeg, but with embeded file signature hidden and not only archives can be embeded
+
+As "outer" file supported and tested: .mp4 .webm .png .jpeg
+As secret (file that is hidden) supported any format
+
+== Compilation
+
+Only C compiler needed, there is Nix shell, so if you have nix installed you can enter repo dir, type `nix develop` or `nix-shell` and then `make <make target>`
+
+== Usage
+
+see `-h`
