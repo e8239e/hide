@@ -1,0 +1,35 @@
+name: build and test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: build
+      run: nix develop --command make build
+    - name: test
+      run: nix develop --command make test
+
+  build-static:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: build-static
+      run: nix develop --command make build-static
+    - name: test
+      run: nix develop --command make test
+
+  build-win:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: build-win
+      run: nix develop --command make build-win
