@@ -10,3 +10,6 @@ build-win:
 
 clean:
 	rm -f *.o hide hide.exe hide.pdb
+
+test:
+	./test.sh
